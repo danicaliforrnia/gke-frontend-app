@@ -23,7 +23,7 @@ jobs:
       id: metadata
       uses: docker/metadata-action@v4
       with:
-        images: '${{ vars.GCP_LOCATION }}-docker.pkg.dev/gke-frontend-app'
+        images: '${{ vars.GCP_LOCATION }}-docker.pkg.dev/cursos-imagina/imagina-registry-prod/gke-frontend-app'
         tags: |
           type=semver,pattern={{version}}
           type=semver,pattern={{major}}.{{minor}}
