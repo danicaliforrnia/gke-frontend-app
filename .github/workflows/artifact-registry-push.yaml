@@ -24,10 +24,7 @@ jobs:
       uses: docker/metadata-action@v4
       with:
         images: '${{ vars.GCP_LOCATION }}-docker.pkg.dev/cursos-imagina/imagina-registry-prod/gke-frontend-app'
-        tags: |
-          type=semver,pattern={{version}}
-          type=semver,pattern={{major}}.{{minor}}
-          type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
+        tags: type=raw,value={{sha}}
 
     - name: 'Authenticate to Google Cloud'
       id: 'auth'
