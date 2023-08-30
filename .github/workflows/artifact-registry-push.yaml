@@ -25,7 +25,7 @@ jobs:
       run: cat nginx.conf
 
     - name: display directory content
-      run: ls -l
+      run: ls -la
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
