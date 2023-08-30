@@ -19,7 +19,7 @@ jobs:
     - name: Update NGINX conf
       env:
         ENV: "${{ github.ref == 'refs/heads/master' && 'prod' || 'dev' }}"
-      run: envsubst < nginx.conf.template > nginx.conf
+      run: envsubst < nginx.conf.template > /tmp/nginx.conf
 
     - name: print NGINX conf
       run: cat nginx.conf
