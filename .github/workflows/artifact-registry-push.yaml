@@ -21,9 +21,6 @@ jobs:
         ENV: "${{ github.ref == 'refs/heads/master' && 'prod' || 'dev' }}"
       run: envsubst < nginx.conf.template > nginx.conf
 
-    - name: display directory content
-      run: ls -la
-
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
